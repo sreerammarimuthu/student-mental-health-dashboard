@@ -9,162 +9,130 @@
             font-family: Arial, sans-serif;
             margin: 20px;
             padding: 20px;
-            background-color: #f9f9f9;
+            background-color: #1a1a2e;
+            color: #eaeaea;
         }
         h1 {
             text-align: center;
-            color: #333;
+            color: #fff;
             margin-bottom: 40px;
         }
         h2 {
             margin-top: 40px;
+            color: #00aaff;
             text-align: center;
-            color: #007bff;
+            cursor: pointer;
+            background-color: #003366;
+            padding: 10px;
+            border-radius: 8px;
+            text-transform: uppercase;
+        }
+        h2:hover {
+            background-color: #004d99;
         }
         .visualization {
             margin: 20px 0;
             text-align: center;
+            display: none; /* Initially hidden for toggle functionality */
+            padding: 10px;
+            border-radius: 10px;
+            border: 3px solid #004d99; /* Dark blue outline */
+            background-color: #0f3460;
         }
         iframe {
             width: 90%;
             height: 600px;
-            border: 1px solid #ccc;
+            border: none;
             border-radius: 8px;
-            margin-bottom: 20px;
+        }
+        .toggle-button {
+            color: #00aaff;
+            cursor: pointer;
         }
     </style>
+    <script>
+        function toggleVisualization(id) {
+            const viz = document.getElementById(id);
+            if (viz.style.display === "none") {
+                viz.style.display = "block";
+            } else {
+                viz.style.display = "none";
+            }
+        }
+    </script>
 </head>
 <body>
     <h1>Interactive Visualizations Dashboard</h1>
 
     <!-- Student Count Demographics -->
-    <h2>Student Count Demographics</h2>
-    <div class="visualization">
+    <h2 onclick="toggleVisualization('demographics')">Student Count Demographics</h2>
+    <div id="demographics" class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/student_counts_by_age_group.html"></iframe>
-    </div>
-    <div class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/student_counts_by_gender.html"></iframe>
-    </div>
-    <div class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/student_counts_by_race.html"></iframe>
-    </div>
-    <div class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/student_counts_by_sexual_orientation.html"></iframe>
-    </div>
-    <div class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/student_counts_by_education.html"></iframe>
     </div>
 
     <!-- Loneliness -->
-    <h2>Loneliness</h2>
-    <div class="visualization">
+    <h2 onclick="toggleVisualization('loneliness')">Loneliness</h2>
+    <div id="loneliness" class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/student_counts_by_loneliness.html"></iframe>
-    </div>
-    <div class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/loneliness_levels_distribution.html"></iframe>
-    </div>
-    <div class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/inst_public_loneliness.html"></iframe>
-    </div>
-    <div class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/inst_size_loneliness.html"></iframe>
-    </div>
-    <div class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/inst_type_loneliness.html"></iframe>
-    </div>
-    <div class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/loneliness_vs_geo.html"></iframe>
     </div>
 
     <!-- Depression -->
-    <h2>Depression</h2>
-    <div class="visualization">
+    <h2 onclick="toggleVisualization('depression')">Depression</h2>
+    <div id="depression" class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/phq-9_severity_levels_overall.html"></iframe>
-    </div>
-    <div class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/phq-9_severity_levels_by_inst_public_label.html"></iframe>
-    </div>
-    <div class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/phq-9_severity_levels_by_inst_size_label.html"></iframe>
-    </div>
-    <div class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/phq-9_severity_levels_by_inst_type_label.html"></iframe>
-    </div>
-    <div class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/phq-9_severity_levels_by_inst_geo_label.html"></iframe>
     </div>
 
     <!-- Anxiety -->
-    <h2>Anxiety</h2>
-    <div class="visualization">
+    <h2 onclick="toggleVisualization('anxiety')">Anxiety</h2>
+    <div id="anxiety" class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/gad-7_severity_levels_overall.html"></iframe>
-    </div>
-    <div class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/gad-7_severity_levels_by_inst_public_label.html"></iframe>
-    </div>
-    <div class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/gad-7_severity_levels_by_inst_size_label.html"></iframe>
-    </div>
-    <div class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/gad-7_severity_levels_by_inst_type_label.html"></iframe>
-    </div>
-    <div class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/gad-7_severity_levels_by_inst_geo_label.html"></iframe>
     </div>
 
     <!-- ADHD -->
-    <h2>ADHD</h2>
-    <div class="visualization">
+    <h2 onclick="toggleVisualization('adhd')">ADHD</h2>
+    <div id="adhd" class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/student_counts_by_adhd_levels.html"></iframe>
-    </div>
-    <div class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/adhd_vs_inst_public.html"></iframe>
-    </div>
-    <div class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/adhd_vs_inst_size.html"></iframe>
-    </div>
-    <div class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/adhd_vs_inst_type.html"></iframe>
-    </div>
-    <div class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/adhd_vs_geo.html"></iframe>
     </div>
 
     <!-- Psychological Well-Being -->
-    <h2>Psychological Well-Being</h2>
-    <div class="visualization">
+    <h2 onclick="toggleVisualization('wellbeing')">Psychological Well-Being</h2>
+    <div id="wellbeing" class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/diener_satisfaction_levels_overall.html"></iframe>
-    </div>
-    <div class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/diener_satisfaction_levels_by_inst_public_label.html"></iframe>
-    </div>
-    <div class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/diener_satisfaction_levels_by_inst_size_label.html"></iframe>
-    </div>
-    <div class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/diener_satisfaction_levels_by_inst_type_label.html"></iframe>
-    </div>
-    <div class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/diener_satisfaction_levels_by_inst_geo_label.html"></iframe>
     </div>
 
     <!-- Eating Disorder -->
-    <h2>Eating Disorder</h2>
-    <div class="visualization">
+    <h2 onclick="toggleVisualization('eating_disorder')">Eating Disorder</h2>
+    <div id="eating_disorder" class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/scoff_scores_overall.html"></iframe>
-    </div>
-    <div class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/scoff_scores_by_inst_public_label.html"></iframe>
-    </div>
-    <div class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/scoff_scores_by_inst_size_label.html"></iframe>
-    </div>
-    <div class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/scoff_scores_by_inst_type_label.html"></iframe>
-    </div>
-    <div class="visualization">
         <iframe src="https://sreerammarimuthu.github.io/CCHackathonIDV/scoff_scores_by_inst_geo_label.html"></iframe>
     </div>
-
 </body>
 </html>
