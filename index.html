@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Student Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            margin: 0;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 4px;
+        }
+        .section h2:hover {
+            background-color: #0056b3;
+        }
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: none;
+        }
+        .section ul li {
+            margin: 5px 0;
+        }
+        .section ul li a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .section ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function toggleSection(id) {
+            const section = document.getElementById(id);
+            section.style.display = section.style.display === "none" ? "block" : "none";
+        }
+    </script>
+</head>
+<body>
+    <h1>Interactive Student Dashboard</h1>
+
+    <!-- Student Count Demographics -->
+    <div class="section">
+        <h2 onclick="toggleSection('demographics')">Student Count Demographics</h2>
+        <ul id="demographics">
+            <li><a href="student_counts_by_age_group.html" target="_blank">By Age Group</a></li>
+            <li><a href="student_counts_by_gender.html" target="_blank">By Gender</a></li>
+            <li><a href="student_counts_by_race.html" target="_blank">By Race</a></li>
+            <li><a href="student_counts_by_sexual_orientation.html" target="_blank">By Sexual Orientation</a></li>
+            <li><a href="student_counts_by_education.html" target="_blank">By Education</a></li>
+        </ul>
+    </div>
+
+    <!-- Loneliness -->
+    <div class="section">
+        <h2 onclick="toggleSection('loneliness')">Loneliness</h2>
+        <ul id="loneliness">
+            <li><a href="student_counts_by_loneliness.html" target="_blank">Student Counts by Loneliness</a></li>
+            <li><a href="loneliness_levels_distribution.html" target="_blank">Loneliness Levels Distribution</a></li>
+            <li><a href="inst_public_loneliness.html" target="_blank">Institution Public vs Loneliness</a></li>
+            <li><a href="inst_size_loneliness.html" target="_blank">Institution Size vs Loneliness</a></li>
+            <li><a href="inst_type_loneliness.html" target="_blank">Institution Type vs Loneliness</a></li>
+            <li><a href="loneliness_vs_geo.html" target="_blank">Loneliness vs Geography</a></li>
+        </ul>
+    </div>
+
+    <!-- Depression -->
+    <div class="section">
+        <h2 onclick="toggleSection('depression')">Depression</h2>
+        <ul id="depression">
+            <li><a href="phq-9_severity_levels_overall.html" target="_blank">PHQ-9 Severity - Overall</a></li>
+            <li><a href="phq-9_severity_levels_by_inst_public_label.html" target="_blank">By Institution Public</a></li>
+            <li><a href="phq-9_severity_levels_by_inst_size_label.html" target="_blank">By Institution Size</a></li>
+            <li><a href="phq-9_severity_levels_by_inst_type_label.html" target="_blank">By Institution Type</a></li>
+            <li><a href="phq-9_severity_levels_by_inst_geo_label.html" target="_blank">By Geography</a></li>
+        </ul>
+    </div>
+
+    <!-- Anxiety -->
+    <div class="section">
+        <h2 onclick="toggleSection('anxiety')">Anxiety</h2>
+        <ul id="anxiety">
+            <li><a href="gad-7_severity_levels_overall.html" target="_blank">GAD-7 Severity - Overall</a></li>
+            <li><a href="gad-7_severity_levels_by_inst_public_label.html" target="_blank">By Institution Public</a></li>
+            <li><a href="gad-7_severity_levels_by_inst_size_label.html" target="_blank">By Institution Size</a></li>
+            <li><a href="gad-7_severity_levels_by_inst_type_label.html" target="_blank">By Institution Type</a></li>
+            <li><a href="gad-7_severity_levels_by_inst_geo_label.html" target="_blank">By Geography</a></li>
+        </ul>
+    </div>
+
+    <!-- ADHD -->
+    <div class="section">
+        <h2 onclick="toggleSection('adhd')">ADHD</h2>
+        <ul id="adhd">
+            <li><a href="student_counts_by_adhd_levels.html" target="_blank">Student Counts by ADHD Levels</a></li>
+            <li><a href="adhd_vs_inst_public.html" target="_blank">By Institution Public</a></li>
+            <li><a href="adhd_vs_inst_size.html" target="_blank">By Institution Size</a></li>
+            <li><a href="adhd_vs_inst_type.html" target="_blank">By Institution Type</a></li>
+            <li><a href="adhd_vs_geo.html" target="_blank">By Geography</a></li>
+        </ul>
+    </div>
+
+    <!-- Psychological Well Being -->
+    <div class="section">
+        <h2 onclick="toggleSection('wellbeing')">Psychological Well Being</h2>
+        <ul id="wellbeing">
+            <li><a href="diener_satisfaction_levels_overall.html" target="_blank">Overall Satisfaction</a></li>
+            <li><a href="diener_satisfaction_levels_by_inst_public_label.html" target="_blank">By Institution Public</a></li>
+            <li><a href="diener_satisfaction_levels_by_inst_size_label.html" target="_blank">By Institution Size</a></li>
+            <li><a href="diener_satisfaction_levels_by_inst_type_label.html" target="_blank">By Institution Type</a></li>
+            <li><a href="diener_satisfaction_levels_by_inst_geo_label.html" target="_blank">By Geography</a></li>
+        </ul>
+    </div>
+
+    <!-- Eating Disorder -->
+    <div class="section">
+        <h2 onclick="toggleSection('eating_disorder')">Eating Disorder</h2>
+        <ul id="eating_disorder">
+            <li><a href="scoff_scores_overall.html" target="_blank">SCOFF Scores - Overall</a></li>
+            <li><a href="scoff_scores_by_inst_public_label.html" target="_blank">By Institution Public</a></li>
+            <li><a href="scoff_scores_by_inst_size_label.html" target="_blank">By Institution Size</a></li>
+            <li><a href="scoff_scores_by_inst_type_label.html" target="_blank">By Institution Type</a></li>
+            <li><a href="scoff_scores_by_inst_geo_label.html" target="_blank">By Geography</a></li>
+        </ul>
+    </div>
+</body>
+</html>
