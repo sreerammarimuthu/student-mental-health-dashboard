@@ -11,4 +11,4 @@ This project visualizes trends specifically in:
 
 A personal passion project combining my interest in behavioral and cognitive analytics along with data visualization built with Python, HTML, Plotly, and data from the University of Michigan's HMS dataset with over 100k records.
 
-🔗 [Explore the live dashboard](https://sreerammarimuthu.github.io/student-mental-health-dashboard/)
+Explore the live dashboard here: https://sreerammarimuthu.github.io/student-mental-health-dashboard/  
