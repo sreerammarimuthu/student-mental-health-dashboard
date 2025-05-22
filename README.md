@@ -9,6 +9,6 @@ This project visualizes trends specifically in:
 
 ### Goal: Make large-scale mental health data accessible and actionable for researchers, educators, and policymakers.
 
-A personal passion project combining my interest in behavioral and cognitive analytics along with data visualization built with Python, HTML, Plotly, and data from the University of Michigan's HMS dataset with over 100k records.
+A personal passion project combining my interests in behavioral analytics along with data visualization built with Python, HTML, Plotly, and data from the University of Michigan's HMS dataset with over 100k records.
 
 Explore the live dashboard here: https://sreerammarimuthu.github.io/student-mental-health-dashboard/  
